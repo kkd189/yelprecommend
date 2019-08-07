@@ -1,0 +1,44 @@
+<!--<form method='POST'> {%csrf_token %}
+	{{form.as_p}} -->
+
+	<!--<input type='submit' value='Save' /> -->
+
+	<!--<button type="button" name="Submit Cuisine" id="submitme"> -->
+	<!--Submit</button>-->
+{% load static %}
+
+<!DOCTYPE html>
+
+<div class="topnav">
+  <a class="cuisine" href="">Home</a>
+  <a href="thankyou/">Restaurant Recommendation</a>
+  <a href="#contact">Dish Recommendation</a>
+  <a href="#about">About</a>
+</div>
+
+<head>
+	<title> Restaurant Recommendation for a Cuisine </title>
+	<link rel="stylesheet" type="text/css"
+		href="{% static 'css/yelp.css' %}">
+<h1> Recommendo!  </h1>
+<i> <center> A unique Restaurant Recommendation catered to your choice </i> </center>
+</head>
+<body bgcolor = "lightblue">
+<form action = "displayRestaurantsForCuisine">
+		<br>
+		<br>
+	<H2>	<b>Enter the cuisine you would like to try: </b> 
+		<input type ="text" name = "cuisineNameInput"> </H2>
+		<br>
+			<i> Sample cuisines are Indian and Chinese </i>
+		<br>
+		<br>
+	<h2>	<b>Enter your zip code: </b> 
+		<input type ="text" name = "zipcode"> </h2>
+		<br>
+		<i> Sample zip codes for testing are 89169, 53704, 85022 </i>
+		<br>
+		<br>
+	<h2> <b><input type = "submit"> </h2> </b>
+</form>
+</body>

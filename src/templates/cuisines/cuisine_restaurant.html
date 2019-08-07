@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<head>
+	<title> Restaurant Recommendation for a Cuisine </title>
+	<link rel="stylesheet" type="text/css"
+		href="{% static 'css/main.css' %}">
+<b> <font size=5> The top restaurants serving {{cuisineName}} cuisine in zipcode {{zipcode}} are:  </b></font>
+<ol>	
+	<b> <font size=4> 1) {{d1}} </b></font><br> <br>
+	{{d2}} <br><br><br>
+	<img style="width: 245px; height: 247px;"
+     alt="Image description"
+	src="{% static 'images/img1.jpg' %}"/>
+	<br><br>
+		<b> <font size=4> 2) {{d3}} </b></font><br> <br>
+	{{d4}} <br>
+		<img style="width: 400px; height: 247px;"
+     alt="Image description"
+	src="{% static 'images/Gandhi.jpg' %}"/>
+	<br><br>
+		<b> <font size=4> 3) {{d5}} </b></font><br> <br>
+	{{d6}}
+	<br>
+			<img style="width: 400px; height: 247px;"
+     alt="Image description"
+	src="{% static 'images/Origin.jpg' %}"/>
+</ol>
+
+<script>
+	var cuscus = {{cuisineName}}
+	console.log("the cuisine in javascript console log print is %s",cuscus)
+</script>
+
+		<br>
+		<br>
+			<b> <font size=5> Would you like to know the top dishes for {{cuisineName}}: </b></font><br> <br>
+	
+	
+	
+	<form action='YesDishes' method='GET'>
+		<!--<input id="your_name" type="text" name="name" value="{{ name }}"> -->
+
+		<input type="hidden" name="cid" value={{cuisineName}}/>
+		<input type="hidden" name="zid" value={{zipcode}}/>
+		<button type='submit'> Yes</button>
+    </form>
+
+
+	<form action='NoDishes' method='GET'>
+		<button type='submit'> No</button>
+    </form>
