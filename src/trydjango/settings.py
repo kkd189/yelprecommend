@@ -23,7 +23,7 @@ print("Hi Sadhana, the base directory is ",BASE_DIR)
 SECRET_KEY = '4#5ipuv*er0%6!-f_ge6-)fm934a#^gduu5o&w+ziml6s@xy$&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['restaurantrecommendation.herokuapp.com']
 
